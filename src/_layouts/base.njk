@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>{% if title %}{{ title }} - {% endif %}Dima's Blog</title>
     <link rel="stylesheet" href="{{ '/css/main.css' | absoluteUrl }}">
+    <script src="{{ '/js/theme.js' | absoluteUrl }}" defer></script>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} - Feed" href="{{ site.feed.path }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - RSS Feed" href="{{ site.feed.path }}">
 </head>
-<body>
+<body data-theme="system">
     <div class="container">
         <header class="site-header">
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="{{ '/' | absoluteUrl }}" class="home-link" {% if page.url === '/' %}aria-current="page"{% endif %}>Home</a>
                 <a href="{{ '/articles/' | absoluteUrl }}" class="articles-link" {% if page.url === '/articles/' %}aria-current="page"{% endif %}>Articles</a>
                 <a href="{{ site.feed.path }}" class="rss-link" aria-label="RSS Feed">RSS</a>
+                <button class="theme-toggle" aria-label="Toggle theme" type="button">
+                    <svg class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <span class="theme-label" aria-hidden="true">System</span>
+                </button>
             </nav>
         </header>
 
