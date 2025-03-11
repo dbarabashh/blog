@@ -18,7 +18,13 @@ export default function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("absoluteUrl", (url, base) => {
+    const baseUrl = base || "/blog";
+    return `${baseUrl}${url}`;
+  });
+
   return {
+    pathPrefix: "/blog/",
     dir: {
       input: "src",
       output: "_site",

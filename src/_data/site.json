@@ -1,14 +1,14 @@
 {
   "title": "Dima's Blog",
   "description": "UI Engineer's personal blog about web development, accessibility, and design",
-  "url": "http://localhost:8080",
+  "url": "https://dbarabashh.github.io/blog",
   "author": {
     "name": "Dima",
     "email": "your-email@example.com"
   },
   "feed": {
     "filename": "feed.xml",
-    "path": "/feed.xml",
-    "id": "http://localhost:8080/"
+    "path": "/blog/feed.xml",
+    "id": "https://dbarabashh.github.io/blog/"
   }
 }
