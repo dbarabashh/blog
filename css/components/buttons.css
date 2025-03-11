@@ -1,0 +1,14 @@
+.read-all-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.read-all-link:hover,
+.read-all-link:focus {
+  background: var(--color-primary);
+  color: white;
+}

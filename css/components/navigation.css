@@ -1,0 +1,45 @@
+.main-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.main-nav a {
+  font-weight: 500;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 4px 8px;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.rss-link:hover,
+.rss-link:focus {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-bottom-color: transparent;
+}
+
+[aria-current="page"] {
+  border-bottom-color: currentColor;
+}
+
+.post-nav {
+  margin: 32px 0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.back-link:hover,
+.back-link:focus {
+  color: var(--color-accent);
+}
