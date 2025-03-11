@@ -1,0 +1,29 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "quoteProps": "as-needed",
+  "plugins": ["prettier-plugin-jinja-template"],
+  "overrides": [
+    {
+      "files": ["*.css", "*.scss"],
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": ["*.html", "*.njk"],
+      "options": {
+        "printWidth": 120,
+        "parser": "jinja-template"
+      }
+    }
+  ]
+}

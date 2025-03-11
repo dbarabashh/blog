@@ -2,37 +2,41 @@
 layout: base.njk
 title: Home
 ---
+
 <section class="hero">
-    <h1 class="greeting">Hi, I'm Dima</h1>
-    <p class="hero-description">A User Interface Engineer passionate about design systems and web accessibility. I create interesting things and learn from smart people.</p>
+  <h1 class="greeting">Hi, I'm Dima</h1>
+  <p class="hero-description">
+    A User Interface Engineer passionate about design systems and web accessibility. I create interesting things and
+    learn from smart people.
+  </p>
 </section>
 
 <section class="latest-posts" aria-labelledby="latest-posts-heading">
-    <h2 id="latest-posts-heading">Latest Articles</h2>
-    
-    {% set postslist = collections.posts | reverse %}
-    {% set postslistCounter = 0 %}
-    
-    <div class="posts-grid">
-    {% for post in postslist %}
-        {% if postslistCounter < 8 %}
-            <article class="post-card">
-                <h3 class="post-title">
-                    <a href="{{ post.url }}">{{ post.data.title }}</a>
-                </h3>
-                <time datetime="{{ post.date | formatDate }}">{{ post.date | formatDate }}</time>
-                {% if post.data.description %}
-                    <p class="post-description">{{ post.data.description }}</p>
-                {% endif %}
-            </article>
-        {% endif %}
-        {% set postslistCounter = postslistCounter + 1 %}
-    {% endfor %}
-    </div>
+  <h2 id="latest-posts-heading">Latest Articles</h2>
 
-    {% if collections.posts.length > 5 %}
-        <div class="read-all">
-            <a href="/articles" class="read-all-link">Read All Articles</a>
-        </div>
-    {% endif %}
+  {% set postslist = collections.posts | reverse %}
+  {% set postslistCounter = 0 %}
+
+  <div class="posts-grid">
+    {% for post in postslist %}
+      {% if postslistCounter < 8 %}
+        <article class="post-card">
+          <h3 class="post-title">
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+          </h3>
+          <time datetime="{{ post.date | formatDate }}">{{ post.date | formatDate }}</time>
+          {% if post.data.description %}
+            <p class="post-description">{{ post.data.description }}</p>
+          {% endif %}
+        </article>
+      {% endif %}
+      {% set postslistCounter = postslistCounter + 1 %}
+    {% endfor %}
+  </div>
+
+  {% if collections.posts.length > 5 %}
+    <div class="read-all">
+      <a href="/articles" class="read-all-link">Read All Articles</a>
+    </div>
+  {% endif %}
 </section>

@@ -83,7 +83,8 @@ class CodeBlockEnhancer {
     const checkmark = document.createElement("svg");
     checkmark.className = "copy-checkmark";
     checkmark.setAttribute("viewBox", "0 0 24 24");
-    checkmark.innerHTML = '<path d="M4 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+    checkmark.innerHTML =
+      '<path d="M4 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
 
     successAnim.appendChild(ripple);
     successAnim.appendChild(checkmark);
