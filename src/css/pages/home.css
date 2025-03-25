@@ -27,21 +27,24 @@
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin-top: 32px;
 }
 
 .post-card {
   background: var(--color-card-bg);
   border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: 24px;
-  transition: border-color 0.2s ease;
+  border-radius: 8px;
+  padding: 28px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .post-card:hover {
   border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .post-title {
@@ -76,7 +79,7 @@ time {
 
 @media (max-width: 1200px) {
   .posts-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
