@@ -39,6 +39,10 @@
   padding: 28px;
   transition: all 0.2s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .post-card:hover {
@@ -75,6 +79,21 @@ time {
   color: var(--color-secondary);
   line-height: 1.6;
   margin: 0;
+  flex-grow: 1;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  max-height: 112px;
+}
+
+.post-description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(to bottom, transparent, var(--color-card-bg) 80%);
 }
 
 @media (max-width: 1200px) {
@@ -96,5 +115,20 @@ time {
 
   .post-card {
     padding: 20px;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .post-title {
+    font-size: 16px;
+    margin: 0 0 12px;
+  }
+
+  .post-description {
+    max-height: none;
+  }
+
+  .post-description::after {
+    height: 36px;
   }
 }
