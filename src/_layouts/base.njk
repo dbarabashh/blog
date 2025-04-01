@@ -7,6 +7,11 @@
     <title>{% if title %}{{ title }} -{% endif %}Dima's Blog</title>
     <link rel="stylesheet" href="{{ '/css/main.css' | absoluteUrl }}" />
     <script src="{{ '/js/theme.js' | absoluteUrl }}" defer></script>
+    <!-- PostHog Analytics Configuration -->
+    <script>
+      window.NEXT_PUBLIC_POSTHOG_KEY = "{{ env.NEXT_PUBLIC_POSTHOG_KEY }}";
+      window.NEXT_PUBLIC_POSTHOG_HOST = "{{ env.NEXT_PUBLIC_POSTHOG_HOST }}";
+    </script>
     <meta
       name="description"
       content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}"
@@ -66,5 +71,6 @@
       </footer>
     </div>
     <script src="{{ '/js/codeblock.js' | absoluteUrl }}"></script>
+    <script type="module" src="{{ '/js/analytics.js' | absoluteUrl }}"></script>
   </body>
 </html>

@@ -1,6 +1,9 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default function (eleventyConfig) {
   let markdownLibrary = markdownIt({
@@ -46,6 +49,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("absoluteUrl", (url, base) => {
     const baseUrl = base || "/blog";
     return `${baseUrl}${url}`;
+  });
+
+  eleventyConfig.addGlobalData("env", () => {
+    return {
+      NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+      NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+    };
   });
 
   return {

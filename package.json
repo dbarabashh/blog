@@ -16,7 +16,9 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.3",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "posthog-js": "^1.234.4"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
