@@ -5,9 +5,9 @@ description: "A deep dive into TypeScript's type system limitations and how to h
 date: 2025-04-07
 ---
 
-While contributing to the typescript-eslint project, I had the opportunity to work on the no-explicit-any rule, which is a crucial tool for maintaining type safety in TypeScript projects. During this work, I encountered an interesting challenge related to code coverage and TypeScript's type system limitations. This experience provided valuable insights into how TypeScript handles type narrowing across function boundaries and when to use type assertions appropriately.
+While contributing to the `typescript-eslint` project, I had the opportunity to work on the `no-explicit-any` rule, which is a crucial tool for maintaining type safety in TypeScript projects. During this work, I encountered an interesting challenge related to code coverage and TypeScript's type system limitations. This experience provided valuable insights into how TypeScript handles type narrowing across function boundaries and when to use type assertions appropriately.
 
-## The Issue
+## The issue
 
 Inside the `no-explicit-any` rule, I came across a function called `createPropertyKeyFixer`, which had an uncovered line:
 
