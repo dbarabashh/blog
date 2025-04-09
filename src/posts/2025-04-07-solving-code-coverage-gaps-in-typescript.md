@@ -27,7 +27,7 @@ After digging in, I realized the fixer only gets called after a check with `isNo
 ```typescript
 function isNodeWithinKeyofAny(node: TSESTree.Node): boolean {
   return (
-    node.parent?.type === AST_NODE_TYPES.TSTypeOperator &&
+    node.parent.type === AST_NODE_TYPES.TSTypeOperator &&
     node.parent.operator === "keyof"
   );
 }
