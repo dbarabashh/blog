@@ -1,0 +1,63 @@
+.hero {
+  margin: 24px 0;
+  text-align: left;
+  padding: 0;
+}
+
+.greeting {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: var(--color-text);
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  justify-content: flex-start;
+}
+
+.social-link img {
+  height: 18px;
+}
+
+.about-list,
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.about-list li,
+.skills-list li {
+  margin-bottom: 6px;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.hero h2 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 20px 0 8px;
+  color: var(--color-text);
+}
+
+.hero p {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-text);
+  margin: 0 0 20px;
+  max-width: 65ch;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin: 20px 0;
+  }
+
+  .social-link img {
+    height: 16px;
+  }
+}

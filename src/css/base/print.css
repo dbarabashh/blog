@@ -1,0 +1,16 @@
+@media print {
+  body {
+    color: black;
+    background: white;
+  }
+
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+}

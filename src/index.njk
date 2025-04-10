@@ -4,11 +4,37 @@ title: Home
 ---
 
 <section class="hero">
-  <h1 class="greeting">Hi, I'm Dima</h1>
-  <p class="hero-description">
-    A User Interface Engineer passionate about design systems and web accessibility. I create interesting things and
-    learn from smart people.
-  </p>
+  <h1 class="greeting">Hi there 👋</h1>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/dima-barabash-537305276/" class="social-link linkedin">
+      <img src="https://img.shields.io/badge/-Dima%20Barabash-blue?style=flat-square&logo=Linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="https://x.com/dbarabashh" class="social-link twitter">
+      <img src="https://img.shields.io/twitter/follow/dbarabashh?style=social" alt="Twitter">
+    </a>
+  </div>
+
+  <h2>A few things about me</h2>
+  <ul class="about-list">
+    <li>🔭 I'm a Ukrainian living in Warsaw, but I work remotely all the time. 🚀</li>
+    <li>🌱 I'm a daily learner, who tries to learn something new every day.</li>
+    <li>👯 I'm eager to collaborate on initiatives that make a positive impact, while also seeking opportunities to share in the value I help create for others.</li>
+    <li>🤔 I'm looking for help with learning to be a better human, engineer, and friend. I want more friends.</li>
+    <li>📫 How to reach me? Probably <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.github.com%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=dbarabashh&tw_p=followbutton">twitter</a></li>
+  </ul>
+
+  <h2>tldr;</h2>
+  <p>I have extensive experience in developing web interfaces, specifically using the React ecosystem. At this point, I am focusing on growing as a T-shaped specialist who aims to strengthen my skills as a strong team player and an effective communicator. Read this as a Product Engineer capable of delivering end-to-end solutions.</p>
+
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>Web Development (JavaScript/TypeScript/Python)</li>
+    <li>Rest/GraphQL and Web API Architecture</li>
+    <li>Agile, Test Driven Development (TDD), Behavior-Driven Development (BDD), Domain Driven Design (DDD).</li>
+    <li>Very Interested in Accessability/a11y and wants to find a more formal way to support that.</li>
+    <li>I'm good at changing my mind based on the available data, and that does not seem to be a skill everybody seems to have.</li>
+  </ul>
 </section>
 
 <section class="latest-posts" aria-labelledby="latest-posts-heading">
@@ -17,22 +43,16 @@ title: Home
   {% set postslist = collections.posts | reverse %}
   {% set postslistCounter = 0 %}
 
-  <div class="posts-grid">
+  <ul class="posts-list">
     {% for post in postslist %}
       {% if postslistCounter < 8 %}
-        <article class="post-card">
-          <h3 class="post-title">
-            <a href="{{ post.url }}">{{ post.data.title }}</a>
-          </h3>
-          <time datetime="{{ post.date | formatDate }}">{{ post.date | formatDate }}</time>
-          {% if post.data.description %}
-            <p class="post-description">{{ post.data.description }}</p>
-          {% endif %}
-        </article>
+        <li class="post-item">
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </li>
       {% endif %}
       {% set postslistCounter = postslistCounter + 1 %}
     {% endfor %}
-  </div>
+  </ul>
 
   {% if collections.posts.length > 5 %}
     <div class="read-all">
