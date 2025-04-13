@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building an AI-Powered Form Builder: Technical Deep Dive"
+title: "Building an AI-Powered form builder"
 description: "A technical exploration of combining GPT-4 with React to create an intuitive form building experience"
 date: 2025-04-13
 ---
