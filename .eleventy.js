@@ -35,9 +35,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("src/posts/*.md");
   });
-  eleventyConfig.addPassthroughCopy({ "src/css": "css", "src/js": "js" });
+  eleventyConfig.addPassthroughCopy({ "src/css": "css", "src/js": "js", "src/assets": "assets" });
   eleventyConfig.addWatchTarget("src/css");
   eleventyConfig.addWatchTarget("src/js");
+  eleventyConfig.addWatchTarget("src/assets");
   eleventyConfig.addFilter("formatDate", (date) => {
     return new Date(date).toLocaleDateString("en-US", {
       year: "numeric",

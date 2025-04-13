@@ -154,6 +154,29 @@ time {
   color: #dc2626;
 }
 
+.post-image {
+  margin: 2em 0;
+  text-align: center;
+}
+
+.post-image img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.post-image figcaption {
+  margin-top: 1em;
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
 @media (max-width: 640px) {
   .post-title {
     font-size: var(--text-xl);
