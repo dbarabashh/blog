@@ -34,7 +34,6 @@ The coolest part is how I integrate AI into the form building process. Using GPT
   - Theme customization
   - Field descriptions and placeholders
 
-
 <figure class="post-image">
   <img src="/assets/images/2demo.gif" alt="Form builder demo showing drag and drop reordering of form elements" style="max-width: 600px; margin: 0 auto; display: block; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
   <figcaption>Demo of the drag and drop functionality for reordering form elements</figcaption>
@@ -45,16 +44,19 @@ The coolest part is how I integrate AI into the form building process. Using GPT
 The form builder is structured around three main components:
 
 ### Schema Management
+
 - Uses JSON Schema for form structure definition
 - Maintains separate UI schema for presentation logic
 - Handles dynamic field ordering and validation rules
 
 ### Form Renderer
+
 - Real-time preview of the form being built
 - Custom field templates for different input types
 - Responsive layout with theme customization
 
 ### AI Integration
+
 - Smart prompt processing with GPT-4
 - Generates both schema and UI configuration
 - Handles complex form patterns and validations
@@ -95,7 +97,6 @@ One of the coolest technical aspects is how I handle form schemas. Instead of ju
 ## Export and Share
 
 We can instantly deploy your form to StackBlitz or export it as a standalone component. The exported forms are self-contained and don't require the form builder dependencies.
-
 
 <figure class="post-image">
   <img src="/assets/images/3demo.gif" alt="Form builder demo showing AI generating a complete form from a natural language prompt" style="max-width: 600px; margin: 0 auto; display: block; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);">
